@@ -1,0 +1,64 @@
+$navbar-toggler-icon-bg: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%2833, 37, 41, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E";
+
+.navbar-toggler {
+  border: none;
+
+  .navbar-toggler-icon {
+    background-image: url(#{$navbar-toggler-icon-bg});
+  }
+}
+
+.navbar-dark {
+  .navbar-nav {
+    .nav-link {
+      color: #ffffff;
+      transition: color 0.3s;
+
+      &:hover {
+        color: #007bff;
+      }
+    }
+  }
+}
+
+// Фонові стилі для header
+header {
+  background-image: linear-gradient(to right, #007bff, #6610f2);
+
+  .display-4 {
+    @media (max-width: 576px) {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+// Стилі для карток
+.card {
+  &:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+  }
+}
+
+// Адаптивність для тексту в секціях
+.col-md-6 {
+  h2 {
+    font-size: 55px;
+    font-weight: bolder;
+  }
+
+  p {
+    font-size: 45px;
+    font-weight: lighter;
+  }
+}
+
+// Стилі для цін
+.old-price {
+  text-decoration: line-through; // Закреслення тексту
+  color: inherit; // Успадкування кольору
+}
+
+.new-price {
+  font-weight: bold; // Виділення нової ціни
+}
